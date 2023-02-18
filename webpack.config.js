@@ -23,7 +23,7 @@ module.exports = [
     },
     output: {
       filename: "[name].[contenthash:8].js",
-      path: path.join(__dirname, "dist/client"),
+      path: path.join(__dirname, ".vercel/output/static"),
     },
     devServer: isDev
       ? {
@@ -53,7 +53,7 @@ module.exports = [
     },
     output: {
       libraryTarget: "commonjs2",
-      path: path.join(__dirname, "dist/server"),
+      path: path.join(__dirname, ".vercel/output/pages"),
     },
     plugins: [
       new webpack.DefinePlugin({
